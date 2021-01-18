@@ -1,0 +1,26 @@
+
+default: &default
+  adapter: mysql2
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 5000
+
+development:
+  <<: *default
+  database: <%= ENV.fetch("DB_NAME") { "ajackus_db" } %>
+  username: <%= ENV.fetch("DB_USERNAME") { "root" }%>
+  password: <%= ENV.fetch("DB_PASSWORD") { "Root@123" }%>
+  host: <%= ENV.fetch("DB_HOST") { "localhost" }%>
+
+test:
+  <<: *default
+  database: <%= ENV.fetch("DB_NAME") { "ajackus_db_test" } %>
+  username: <%= ENV.fetch("DB_USERNAME") { "root" }%>
+  password: <%= ENV.fetch("DB_PASSWORD") { "Root@123" }%>
+  host: <%= ENV.fetch("DB_HOST") { "localhost" }%>
+
+production:
+  <<: *default
+  database: <%= ENV.fetch("DB_NAME") { "ajackus_db" } %>
+  username: <%= ENV.fetch("DB_USERNAME") { "root" }%>
+  password: <%= ENV.fetch("DB_PASSWORD") { "root" }%>
+  host: <%= ENV.fetch("DB_HOST") { "localhost" }%>
