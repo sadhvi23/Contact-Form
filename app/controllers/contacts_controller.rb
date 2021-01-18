@@ -16,9 +16,9 @@ class ContactsController < ApplicationController
     @contact = Contact.new(contact_params)
     respond_to do |format|
       if @contact.save
-        format.html { redirect_to root_path, notice: I18n.t("contact.created") }
+        format.html { redirect_to root_path, notice: I18n.t('contact.created') }
       else
-        format.html { redirect_to root_path, alert: I18n.t("contact.not_created") }
+        format.html { redirect_to root_path, alert: I18n.t('contact.not_created') }
       end
     end
   end

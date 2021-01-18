@@ -1,24 +1,34 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Contact Form
 
-Things you may want to cover:
+# Setting up the app
 
-* Ruby version
+## Prerequisites
 
-* System dependencies
+- Ruby 2.5.1
+- MySQL 5.7.x
 
-* Configuration
+## Getting Started (One-time setup)
 
-* Database creation
+- Install Ruby 2.5.1 (use [RVM](https://rvm.io/) to manage Ruby versions & environments)
+- From the repository directory, run `gem install bundler` to install bundler
+- Run `bundle install` to install all dependencies
+- In `/config/database.yml`, under `development`, make sure the MySQL connection credentials are correct
+- Run `rake db:create db:migrate` to create/migrate/seed the database
 
-* Database initialization
+## Bringing up the app
 
-* How to run the test suite
+- Run `bundle install` to install newly added dependencies
+- Run `rake db:migrate` to run all pending migrations
+- Start the app with `rails s`. The application should be running on port `3000`
+- Start sidekiq
+    - using `bundle exec sidekiq` command
+- To Start contact-form app
+    - `http://localhost:3000`
 
-* Services (job queues, cache servers, search engines, etc.)
+# Branching + PR Policy
 
-* Deployment instructions
+- Branch setup & workflow
+    - `master` replicates the production environment
 
-* ...

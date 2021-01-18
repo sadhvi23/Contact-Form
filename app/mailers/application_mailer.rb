@@ -1,5 +1,5 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'form@example.com'
+  default from: 'from@example.com'
   layout 'mailer'
 
   # Change language of email
