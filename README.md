@@ -16,7 +16,13 @@ Contact Form
 - Run `bundle install` to install all dependencies
 - In `/config/database.yml`, under `development`, make sure the MySQL connection credentials are correct
 - Run `rake db:create db:migrate` to create/migrate/seed the database
-
+- Add smtp settings to env variables
+  - `username`
+  - `password`
+  - `port`
+  - `domain`
+  - `address`
+  
 ## Bringing up the app
 
 - Run `bundle install` to install newly added dependencies
