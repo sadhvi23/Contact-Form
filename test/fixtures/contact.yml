@@ -1,0 +1,17 @@
+#  Fixtures allow you to populate our testing database with predefined data before our tests run
+ajackus_one:
+  id: 1
+  first_name: 'Alley'
+  last_name: 'jones'
+  email : 'alley.jones@test.com'
+  phone_number: "+1 897987898"
+  message: "Hi Alley"
+  locale: "en"
+ajackus_two:
+  id: 2
+  first_name: 'Alley1'
+  last_name: 'jones1'
+  email: 'alley.jones1@test.com'
+  phone_number: "+1 897987899"
+  message: "Hi Alley1"
+  locale: "es"
